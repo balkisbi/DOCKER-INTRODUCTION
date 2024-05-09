@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  postgres_source:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: source_db
+      POSTGRES_USER: source_user
+      POSTGRES_PASSWORD: source_password
+    ports:
+      - "5432:5432"
+  
+  postgres_destination:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: destination_db
+      POSTGRES_USER: destination_user
+      POSTGRES_PASSWORD: destination_password
