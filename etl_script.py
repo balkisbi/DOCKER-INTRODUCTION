@@ -21,7 +21,7 @@ destination_db_config = {
 
 
 def etl():
-    data = pd.read_csv('data/test.csv')
+    data = pd.read_csv('test.csv')
     
     source_engine = create_engine(f"postgresql://{source_db_config['user']}:{source_db_config['password']}@{source_db_config['host']}:{source_db_config['port']}/{source_db_config['database']}")
     destination_engine = create_engine(f"postgresql://{destination_db_config['user']}:{destination_db_config['password']}@{destination_db_config['host']}:{destination_db_config['port']}/{destination_db_config['database']}")
